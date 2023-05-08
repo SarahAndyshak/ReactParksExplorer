@@ -1,8 +1,8 @@
 import * as c from './ActionTypes';
 
-export const getParkDirectorySuccess = (parkDirectory) => ({
+export const getParkDirectorySuccess = (parkInfo) => ({
   type: c.GET_PARK_DIRECTORY_SUCCESS,
-  parkDirectory
+  parkInfo: parkInfo
 });
 
 export const getParkDirectoryFailure = (error) => ({
