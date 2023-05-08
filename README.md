@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Parks Finder with React and C#
+
+## By Sarah Andyshak, Erin Timlin, and Vera Weikel
+
+### A practice application for a React front end site to consume the ParksDirectory API built in C#.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
