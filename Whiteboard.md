@@ -1,0 +1,4 @@
+- [x] Get Parks API connected to React site
+- [ ] Get routing working to see details for each park - use link
+- [ ] make the link a clickable image for park
+- [ ] Add NY Times API
