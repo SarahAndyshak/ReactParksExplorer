@@ -1,7 +1,5 @@
 import React, { useEffect, useReducer } from 'react';
-// import parkDirectoryReducer from './../reducers/park-directory-reducer';
 import parkDirectoryReducer from './../reducers/park-directory-reducer';
-// import { getParkDirectoryFailure, getParkDirectorySuccess } from './../actions/index';
 import { getParkDirectoryFailure, getParkDirectorySuccess } from './../action/index';
 
 const intialState = {
