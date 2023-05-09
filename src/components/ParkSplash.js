@@ -1,9 +1,7 @@
 import React, { useEffect, useReducer } from 'react';
 import parkDirectoryReducer from './../reducers/park-directory-reducer';
 import { getParkDirectoryFailure, getParkDirectorySuccess } from './../action/index';
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import ParkDetail from './ParkDetail';
-import PropTypes from "prop-types";
+import { BrowserRouter as Link } from "react-router-dom";
 
 const intialState = {
   isLoaded: false,
@@ -67,16 +65,5 @@ function ParkSplash() {
     );
   }
 }
-
-// ParkSplash.propTypes = {
-//   name: PropTypes.string,
-//   classification: PropTypes.string,
-//   location: PropTypes.string,
-//   majorLandmarks: PropTypes.string,
-//   facilities: PropTypes.string,
-//   yearFounded: PropTypes.number,
-//   // id: PropTypes.string,
-//   // whenTicketClicked: PropTypes.func
-// }
 
 export default ParkSplash;
