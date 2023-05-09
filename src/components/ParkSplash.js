@@ -1,6 +1,9 @@
 import React, { useEffect, useReducer } from 'react';
 import parkDirectoryReducer from './../reducers/park-directory-reducer';
 import { getParkDirectoryFailure, getParkDirectorySuccess } from './../action/index';
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import ParkDetail from './ParkDetail';
+import PropTypes from "prop-types";
 
 const intialState = {
   isLoaded: false,
@@ -15,18 +18,16 @@ function ParkSplash() {
   useEffect(() => {
     fetch(`http://localhost:5000/api/parks`)
       .then(response => {
-        // console.log("respons json: ", response.json()) // info pending in promise 
         if(!response.ok){
           throw new Error(`${response.status}: ${response.statusText}`);
         } else {
-          // console.log("respons: ", response()) // action res
           return response.json()
         }
       })
       .then((jsonifiedResponse) => {
-         console.log("jsonifiedResponse: ", jsonifiedResponse);
-          const action = getParkDirectorySuccess(jsonifiedResponse)//.results
-         console.log("action: ", action);
+          console.log("jsonifiedResponse: ", jsonifiedResponse);
+          const action = getParkDirectorySuccess(jsonifiedResponse)
+          console.log("action: ", action);
           dispatch(action);
         })
       .catch((error) => {
@@ -45,19 +46,37 @@ function ParkSplash() {
     return (
       <React.Fragment>
         <h1>Park Info</h1>
+
+
+
         <ul>
           {console.log("parkInfo: ", parkInfo)}
           {parkInfo.map((park, parkId) =>
           <li key={parkId}>
             {console.log("park: ", park)}
-            <h3>{park.name}</h3>
+              <Link to={`/parks/${parkId}`}>
+              <h3>{park.name}</h3>
+              </Link>
             <p>{park.location}</p>
           </li>
           )}
         </ul>
+        
+
       </React.Fragment>
     );
   }
 }
+
+// ParkSplash.propTypes = {
+//   name: PropTypes.string,
+//   classification: PropTypes.string,
+//   location: PropTypes.string,
+//   majorLandmarks: PropTypes.string,
+//   facilities: PropTypes.string,
+//   yearFounded: PropTypes.number,
+//   // id: PropTypes.string,
+//   // whenTicketClicked: PropTypes.func
+// }
 
 export default ParkSplash;
