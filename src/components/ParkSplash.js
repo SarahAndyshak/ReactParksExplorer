@@ -54,7 +54,7 @@ function ParkSplash() {
           {parkInfo.map((park, parkId) =>
           <li key={parkId}>
             {console.log("park: ", park)}
-              <Link to={`/parks/${parkId}`}>
+              <Link to={`/parks/${park.parkId}`}>
               <h3>{park.name}</h3>
               </Link>
             <p>{park.location}</p>
