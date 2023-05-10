@@ -43,7 +43,7 @@ function ParkSplash() {
   } else {
     return (
       <React.Fragment>
-        <h1>Park Info</h1>
+        <h1>Plan your visit to National and State Parks!</h1>
 
 
 

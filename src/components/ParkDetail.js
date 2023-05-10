@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 
 function ParkDetail() {
   let { id } = useParams();
@@ -34,12 +34,14 @@ function ParkDetail() {
 
     <React.Fragment>
       <h1>Park Name: {parkState.name}</h1>
-      <h2>Classification: {parkState.classification}</h2>
-      <h2>Location: {parkState.location}</h2>
-      <h2>Major Landmarks: {parkState.majorLandmarks}</h2>
-      <h2>Activities available: {parkState.activities}</h2>
-      <h2>Facilities: {parkState.facilities}</h2>
-      <h2>Year Founded: {parkState.yearFounded}</h2>
+      <h3>Classification: {parkState.classification}</h3>
+      <h3>Location: {parkState.location}</h3>
+      <h3>Major Landmarks: {parkState.majorLandmarks}</h3>
+      <h3>Activities available: {parkState.activities}</h3>
+      <h3>Facilities: {parkState.facilities}</h3>
+      <h3>Year Founded: {parkState.yearFounded}</h3>
+      <br/>
+      <Link to={`/`}>Back Home</Link>
     </React.Fragment>
   );
   }
