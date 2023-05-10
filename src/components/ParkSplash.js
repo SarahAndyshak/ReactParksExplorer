@@ -45,8 +45,6 @@ function ParkSplash() {
       <React.Fragment>
         <h1>Plan your visit to National and State Parks!</h1>
 
-
-
         <ul>
           {console.log("parkInfo: ", parkInfo)}
           {parkInfo.map((park, parkId) =>
@@ -60,7 +58,6 @@ function ParkSplash() {
           )}
         </ul>
         
-
       </React.Fragment>
     );
   }
