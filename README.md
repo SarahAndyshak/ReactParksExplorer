@@ -3,7 +3,7 @@
 ### By Sarah Andyshak, Erin Timlin, and Vera Weikel
 
 ## Description
-A React application that helps users explore national parks. This application consumes the [ParksDirectory API](https://github.com/SarahAndyshak/ParksDirectoryCopy.Solution).
+A React application that helps users explore national parks. This application consumes the [ParksDirectory API](https://github.com/SarahAndyshak/ParksDirectoryCopy.Solution). Part of my capstone project.
 
 #### [Technologies Used](#technologies-used)
 #### [How to use this App](#how-to-use-this-app)
